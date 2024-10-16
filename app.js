@@ -27,14 +27,19 @@ function posicaoRandomica() {
 
 	console.log(posicaoX, posicaoY)
 
-	var mosquito = document.createElement('img')
-	mosquito.src = 'images/mosca.png'
-	mosquito.className = tamanhoAleatorio() + ' ' + ladoAleatorio()
-	mosquito.style.left = posicaoX + 'px'
-	mosquito.style.top = posicaoY + 'px'
-	mosquito.style.position = 'absolute'
-  mosquito.id = "mosquito";
-	document.body.appendChild(mosquito)
+	var mosquito = document.createElement('img');
+	mosquito.src = 'images/mosca.png';
+	mosquito.className = tamanhoAleatorio() + ' ' + ladoAleatorio();
+	mosquito.style.left = posicaoX + 'px';
+	mosquito.style.top = posicaoY + 'px';
+	mosquito.style.position = 'absolute';
+  	mosquito.id = "mosquito";
+
+	mosquito.onclick = function(){
+		this.remove();
+	};
+
+	document.body.appendChild(mosquito);
 
 }
 
