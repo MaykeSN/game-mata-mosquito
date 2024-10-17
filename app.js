@@ -21,7 +21,7 @@ function posicaoRandomica() {
 	
 
 	if(vidas > 3){
-		alert('Game over')
+		window.location.href = "fim_de_jogo.html";
 	}
 	else{
 		document.getElementById('v' + vidas).src = "images/coracao_vazio.png";
