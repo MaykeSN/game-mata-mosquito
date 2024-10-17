@@ -6,7 +6,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Mata Mosquito</title>
-    <script defer src="app.js"></script>
+    <script src="app.js"></script>
     <link rel="stylesheet" href="style.css">
 </head>
 
@@ -20,13 +20,17 @@
         </div>
 
         <div class="cronometro">
-            Tempo restante: ?
+            Tempo restante: <span id="cronometro"></span>
         </div>
     </div>
 
 
     <script>
-        setInterval(()=>{
+
+        document.getElementById('cronometro').innerHTML = tempo;
+
+        var criamosca = setInterval(()=>{
+            
             posicaoRandomica();
         }, 2000)
     </script>
